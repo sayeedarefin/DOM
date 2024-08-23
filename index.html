@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+        <h1>
+            Welcome to my DOM
+        </h1>
+    </header>
+    <main>
+        <h1>This is a awsome DOM</h1>
+        <ul>
+            <li>aloo</li>
+            <li>potol</li>
+            <li>shobji</li>
+            <li>shaak</li>
+            <li>ilish</li>
+        </ul>
+    </main>
+    <script src="js.js"></script>
+    <script>
+        const liCollection=document.getElementsByTagName('li')
+        // console.log(liCollection)
+        for(const li in liCollection){
+            console.log(li.innerText);
+        }
+
+        const allHedings= document.getElementsByTagName('h1')
+        for (const h1 in allHedings){
+            console.log(h1.innerText)
+        }
+        
+        const student={name:"abul",
+            age: 25,
+            ID:11,
+            study: function(time){console.log(time, "study kortese")}
+        }
+    </script> 
+  </body>
+  
+  </script>
+</html>
