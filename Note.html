@@ -1,0 +1,94 @@
+<h1>getElementsByTagName</h1>
+<p>
+    Description: This method selects all elements in the document (or within a specific element) that match a given tag name. It returns a live HTMLCollection of elements, which automatically updates if the document structure changes.</p>
+
+    <h1>getElementsByClassName
+        </h1>
+        <p>Description: This method selects all elements in the document (or within a specific element) that have a specific class name. It also returns a live HTMLCollection of elements.</p>
+
+        <p>Key Differences:
+            Selection by Tag vs. Class:
+            
+            getElementsByTagName: Selects elements based on their tag name (e.g., all <li>, <h1>, etc.).
+            getElementsByClassName: Selects elements based on their class name (e.g., all elements with class item).
+            Return Type:
+            
+            Both methods return a live HTMLCollection, which updates automatically if the document changes.</p>
+
+            ### Traversing the DOM: `querySelector` and `querySelectorAll`
+
+<p>When working with the DOM in JavaScript, two powerful methods for selecting and traversing elements are `querySelector` and `querySelectorAll`. These methods allow you to use CSS-style selectors to find elements within the document.
+
+    ### 1. `querySelector`
+    - **Description**: `querySelector` returns the first element that matches a specified CSS selector within the document. If no elements match, it returns `null`.
+    
+    - **Syntax**:
+      ```javascript
+      var element = document.querySelector('selector');
+      ```
+    
+    - **Example**:</p>
+  ```html
+  <div class="container">
+      <h1 id="title">Welcome to DOM Traversing</h1>
+      <p class="description">This is a sample paragraph.</p>
+  </div>
+
+  <script>
+      var title = document.querySelector('#title');
+      console.log(title.innerText); // Outputs: Welcome to DOM Traversing
+  </script>
+  ```
+
+- <p>
+    **Explanation**:
+  - In this example, `querySelector('#title')` selects the first element with the `id` of `title` and logs its text content.
+
+### 2. `querySelectorAll`
+- **Description**: `querySelectorAll` returns a static (non-live) NodeList of all elements that match the specified CSS selector(s). You can iterate over the NodeList using loops.
+
+- **Syntax**:
+  ```javascript
+  var elements = document.querySelectorAll('selector');
+  ```
+
+- **Example**:
+  ```html
+</p>
+  <div class="container">
+      <h1 id="title">Welcome to DOM Traversing</h1>
+      <p class="description">This is a sample paragraph 1.</p>
+      <p class="description">This is a sample paragraph 2.</p>
+      <p class="description">This is a sample paragraph 3.</p>
+  </div>
+
+  <script>
+      var descriptions = document.querySelectorAll('.description');
+      descriptions.forEach(function(desc) {
+          console.log(desc.innerText);
+      });
+  </script>
+  ```
+
+- <p>
+    **Explanation**:
+  - `querySelectorAll('.description')` selects all elements with the class `description` and logs the text content of each.
+
+### Key Differences
+- **Single vs. Multiple Elements**:
+  - `querySelector`: Returns the first matching element.
+  - `querySelectorAll`: Returns all matching elements as a NodeList.
+
+- **Return Type**:
+  - `querySelector`: Returns a single element or `null`.
+  - `querySelectorAll`: Returns a NodeList, which can be looped through.
+
+### Practical Use Cases
+- **`querySelector`**:
+  - Use when you need a single, specific element (e.g., the first button on a page).
+  
+- **`querySelectorAll`**:
+  - Use when you need to select multiple elements (e.g., all items in a list) and perform operations on each.
+
+These methods provide flexibility and power when traversing and manipulating the DOM, making them essential tools for any JavaScript developer.
+</p>
